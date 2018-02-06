@@ -1,0 +1,21 @@
+#include <iostream>
+#include "Liste.hpp"
+
+
+Liste::liste(){
+  _tete = nullptr;
+}
+
+void Liste::ajouterDevant(int valeur) {
+  _tete = new Noeud(valeur,_tete);
+}
+
+int Liste::getTaille(){
+  cpt = 0;
+  if (_tete=nullptr){
+    return 0;
+  }else {
+    return 1+; 
+  }
+  
+}
