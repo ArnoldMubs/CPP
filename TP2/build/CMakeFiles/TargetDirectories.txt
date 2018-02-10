@@ -1,0 +1,5 @@
+/Users/ArnoldMubs/Desktop/Mes cours/Licence 3/s4/c++/TP2/build/CMakeFiles/rebuild_cache.dir
+/Users/ArnoldMubs/Desktop/Mes cours/Licence 3/s4/c++/TP2/build/CMakeFiles/edit_cache.dir
+/Users/ArnoldMubs/Desktop/Mes cours/Licence 3/s4/c++/TP2/build/CMakeFiles/main_test.out.dir
+/Users/ArnoldMubs/Desktop/Mes cours/Licence 3/s4/c++/TP2/build/CMakeFiles/main_liste.out.dir
+/Users/ArnoldMubs/Desktop/Mes cours/Licence 3/s4/c++/TP2/build/CMakeFiles/main_doubler21.out.dir
