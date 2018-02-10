@@ -13,7 +13,7 @@ add_executable( main_doubler21.out src/main_doubler21.cpp
 add_executable( main_liste.out src/main_liste.cpp 
   src/Liste.cpp)
 
-#Target_link_libraries( main_doubler21.out ${PKG_LIBRARIES} )
+Target_link_libraries( main_doubler21.out ${PKG_LIBRARIES} )
 
 add_executable( main_test.out src/main_test.cpp 
    src/Doubler.cpp 

@@ -1,1 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/c++   -std=c++14 -Wall -Wextra -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/main_doubler21.out.dir/src/main_doubler21.cpp.o CMakeFiles/main_doubler21.out.dir/src/Doubler.cpp.o  -o main_doubler21.out 
