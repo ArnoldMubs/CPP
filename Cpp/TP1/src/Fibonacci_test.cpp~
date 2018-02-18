@@ -1,0 +1,12 @@
+#include "fibonacci.hpp"
+#include <CppUTest/CommandLineTestRunner.h>
+
+TEST_GROUP(GroupFibonacci) { };
+TEST(GroupFibonacci, test_fibonacciRecursif) { //test unitaire fibonacci recursif
+    int result = fibonacciRecursif();
+    CHECK_EQUAL(42, result);
+}
+TEST(GroupFibonacci, test_doubler_2) { //test unitaire fibonacci iteratif
+    int result = doubler(0);
+    CHECK_EQUAL(0, result);
+}

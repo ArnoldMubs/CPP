@@ -1,0 +1,23 @@
+#include <CppUTest/CommandLineTestRunner.h>
+
+#include "Liste.hpp"
+
+TEST_GROUP(GroupListe) { };
+
+TEST(GroupListe, struct_Noeud_test1) 
+{
+  Noeud premier{2,nullptr};
+  
+  CHECK_EQUAL(premier._valeur, 2);
+}
+
+TEST(GroupListe, struct_Noeud_test2) 
+{
+   Noeud deuxieme {7,nullptr};
+   Noeud premier{2,&deuxieme};
+  
+  
+  CHECK_EQUAL(premier._valeur, 2);
+  CHECK_EQUAL(premier._suivant->_valeur, 7);
+}
+
