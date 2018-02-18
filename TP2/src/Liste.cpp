@@ -6,9 +6,17 @@ Liste::Liste(){
   _tete = nullptr;
 }
 
+Liste::~Liste(){
+  delete _tete;
+}
+
 Noeud::Noeud(int valeur, Noeud* suivant){
   _valeur = valeur;
   _suivant =  suivant;
+}
+
+Noeud::~Noeud(){
+  delete _suivant;
 }
 
 void Liste::ajouterDevant(int valeur) {
