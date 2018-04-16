@@ -1,8 +1,0 @@
-#ifndef Vecteur3_hpp
-#define Vecteur3_hpp
-struct vecteur3{
-  float x;
-  float y;
-  float z;
-};
-#endif

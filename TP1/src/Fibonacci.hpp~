@@ -1,5 +1,0 @@
-#ifndef fibonacci_hpp
-#define fibonacci_hpp
-int fibonacciIteratif (int n);
-int fibonacciRecursif (int n);
-#endif
