@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/etudiants/amubuang/Documents/cpp/TP7/src/Image.cpp
+iostream
+-
+Image.hpp
+/etudiants/amubuang/Documents/cpp/TP7/src/Image.hpp
+cmath
+-
+string
+-
+
+/etudiants/amubuang/Documents/cpp/TP7/src/Image.hpp
+string
+-
+

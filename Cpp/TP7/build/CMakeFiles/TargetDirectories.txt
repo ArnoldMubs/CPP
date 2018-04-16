@@ -1,0 +1,2 @@
+/etudiants/amubuang/Documents/cpp/TP7/build/CMakeFiles/main_image.out.dir
+/etudiants/amubuang/Documents/cpp/TP7/build/CMakeFiles/main_test.out.dir

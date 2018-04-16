@@ -1,0 +1,65 @@
+
+#include <CppUTest/CommandLineTestRunner.h>
+
+#include "Image.hpp"
+
+#include <sstream>
+
+TEST_GROUP(GroupLivre) { };
+
+TEST(GroupLivre, Image_constructeur) 
+{
+        Image image(40,50);
+	CHECK_EQUAL(image.getLargeur(),40);
+	CHECK_EQUAL(image.getHauteur(),50);
+}
+
+TEST(GroupLivre, Livre_constructeur_2) 
+{
+	try 
+    {
+        Livre livre("titre1;", "auteur1", 1337);
+		FAIL( "exception non levee" );
+	}
+	catch (const std::string& str) 
+    {
+		CHECK_EQUAL(str, "erreur : titre non valide (';' non autorisé)");
+	}
+}
+
+TEST(GroupLivre, Livre_constructeur_3) 
+{
+	try 
+    {
+        Livre livre("titre1", "auteur1;", 1337);
+		FAIL( "exception non levee" );
+	}
+	catch (const std::string& str) 
+    {
+		CHECK_EQUAL(str, "erreur : auteur non valide (';' non autorisé)");
+	}
+}
+
+TEST(GroupLivre, Livre_constructeur_4) 
+{
+	try 
+    {
+        Livre livre("titre1", "auteur1\n", 1337);
+		FAIL( "exception non levee" );
+	}
+	catch (const std::string& str) 
+    {
+		CHECK_EQUAL(str, "erreur : auteur non valide ('\n' non autorisé)");
+	}
+}
+
+/*
+TEST(GroupLivre, Livre_inferieur_pp) 
+{
+	CHECK_EQUAL(Livre("t1","a1",1)<Livre("t0","a0",1), false);
+	CHECK_EQUAL(Livre("t1","a1",1)<Livre("t0","a0",0), false);
+	CHECK_EQUAL(Livre("t1","a1",1)<Livre("t0","a0",2), false);
+}
+*/
+
+
