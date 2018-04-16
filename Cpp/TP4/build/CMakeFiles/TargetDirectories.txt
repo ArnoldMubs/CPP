@@ -1,0 +1,2 @@
+/etudiants/amubuang/Documents/cpp/TP4/build/CMakeFiles/figureGeom_test.out.dir
+/etudiants/amubuang/Documents/cpp/TP4/build/CMakeFiles/main.out.dir

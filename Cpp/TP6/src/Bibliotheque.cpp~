@@ -1,0 +1,20 @@
+#include <iostream>
+#include "Bibliotheque.hpp"
+
+void Bibliotheque::afficher() const{
+   for (Livre l : this){
+     l.afficher();
+  }
+}
+void Bibliotheque::trierParAuteurEtTitre(){
+  std::sort(this.);
+}
+void Bibliotheque::trierParAnnee(){
+  std::sort();
+}
+void Bibliotheque::lireFichier(const std::string & nomFichier){
+
+}
+void Bibliotheque::ecrireFichier(const std::string & nomFichier){
+
+}

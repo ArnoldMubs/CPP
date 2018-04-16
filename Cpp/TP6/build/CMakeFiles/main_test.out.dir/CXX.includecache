@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/etudiants/amubuang/Documents/cpp/TP6/src/Livre.cpp
+Livre.hpp
+/etudiants/amubuang/Documents/cpp/TP6/src/Livre.hpp
+iostream
+-
+cstring
+-
+
+/etudiants/amubuang/Documents/cpp/TP6/src/Livre.hpp
+string
+-
+
+/etudiants/amubuang/Documents/cpp/TP6/src/Livre_test.cpp
+CppUTest/CommandLineTestRunner.h
+-
+Livre.hpp
+/etudiants/amubuang/Documents/cpp/TP6/src/Livre.hpp
+sstream
+-
+
+/etudiants/amubuang/Documents/cpp/TP6/src/main_test.cpp
+CppUTest/CommandLineTestRunner.h
+-
+Livre.cpp
+/etudiants/amubuang/Documents/cpp/TP6/src/Livre.cpp
+

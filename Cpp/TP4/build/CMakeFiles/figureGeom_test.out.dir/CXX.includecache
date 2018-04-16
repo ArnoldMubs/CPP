@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/etudiants/amubuang/Documents/cpp/TP4/src/Couleur.hpp
+
+/etudiants/amubuang/Documents/cpp/TP4/src/FigureGeometrique.hpp
+Couleur.hpp
+/etudiants/amubuang/Documents/cpp/TP4/src/Couleur.hpp
+
+/etudiants/amubuang/Documents/cpp/TP4/src/Point.hpp
+
+/etudiants/amubuang/Documents/cpp/TP4/src/PolygoneRegulier.cpp
+iostream
+-
+cmath
+-
+PolygoneRegulier.hpp
+/etudiants/amubuang/Documents/cpp/TP4/src/PolygoneRegulier.hpp
+
+/etudiants/amubuang/Documents/cpp/TP4/src/PolygoneRegulier.hpp
+FigureGeometrique.hpp
+/etudiants/amubuang/Documents/cpp/TP4/src/FigureGeometrique.hpp
+Couleur.hpp
+/etudiants/amubuang/Documents/cpp/TP4/src/Couleur.hpp
+Point.hpp
+/etudiants/amubuang/Documents/cpp/TP4/src/Point.hpp
+

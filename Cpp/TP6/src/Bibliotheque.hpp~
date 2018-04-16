@@ -1,0 +1,11 @@
+#ifndef BIBLIOTHEQUE_HPP_
+#define BIBLIOTHEQUE_HPP_
+class Bibliotheque : public std::vector<Livre> {
+ public :
+  void afficher() const;
+  void trierParAuteurEtTitre();
+  void trierParAnnee();
+  void lireFichier(const std::string & nomFichier);
+  void ecrireFichier(const std::string & nomFichier);
+};
+#endif

@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/etudiants/amubuang/Documents/cpp/TP3/src/Client.hpp
+string
+-
+
+/etudiants/amubuang/Documents/cpp/TP3/src/Location.hpp
+
+/etudiants/amubuang/Documents/cpp/TP3/src/Magasin.hpp
+string
+-
+vector
+-
+Client.hpp
+/etudiants/amubuang/Documents/cpp/TP3/src/Client.hpp
+Produit.hpp
+/etudiants/amubuang/Documents/cpp/TP3/src/Produit.hpp
+Location.hpp
+/etudiants/amubuang/Documents/cpp/TP3/src/Location.hpp
+
+/etudiants/amubuang/Documents/cpp/TP3/src/Produit.hpp
+string
+-
+
+/etudiants/amubuang/Documents/cpp/TP3/src/main.cpp
+iostream
+-
+Location.hpp
+/etudiants/amubuang/Documents/cpp/TP3/src/Location.hpp
+Client.hpp
+/etudiants/amubuang/Documents/cpp/TP3/src/Client.hpp
+Produit.hpp
+/etudiants/amubuang/Documents/cpp/TP3/src/Produit.hpp
+Magasin.hpp
+/etudiants/amubuang/Documents/cpp/TP3/src/Magasin.hpp
+

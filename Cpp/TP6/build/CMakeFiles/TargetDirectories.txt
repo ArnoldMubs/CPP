@@ -1,0 +1,2 @@
+/etudiants/amubuang/Documents/cpp/TP6/build/CMakeFiles/main_bibliotheque.out.dir
+/etudiants/amubuang/Documents/cpp/TP6/build/CMakeFiles/main_test.out.dir

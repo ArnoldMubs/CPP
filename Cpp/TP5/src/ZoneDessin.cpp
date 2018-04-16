@@ -1,0 +1,45 @@
+#include <iostream>
+#include "ZoneDessin.hpp"
+#include "PolygoneRegulier.hpp"
+
+ZoneDessin::ZoneDessin(){
+  Point centre(0,0);
+  Couleur red(1,0,0);
+  _figures.push_back(new PolygoneRegulier(red,centre,50,4));
+  _figures.push_back(new PolygoneRegulier(red,centre,50,5));
+  _figures.push_back(new PolygoneRegulier(red,centre,50,6));
+  _figures.push_back(new PolygoneRegulier(red,centre,50,7));
+}
+
+ZoneDessin::~ZoneDessin(){
+  for (FigureGeometrique* f : _figures){
+    delete f;
+  }
+};
+
+bool ZoneDessin::on_expose_event(GdkEventButton* event) {
+  Glib::RefPtr<Gdk::Window> window = get_window();
+  if (window) {
+    Cairo::RefPtr<Cairo::Context> context = window->create_cairo_context();
+   for (FigureGeometrique* f : _figures){
+     f->afficher(context);
+     std::cout << std::endl;
+   }
+  }
+   return true;
+}
+
+bool ZoneDessin::gererClic(GdkEventButton* event){
+  Glib::RefPtr<Gdk::Window> window = get_window();
+  if(window){
+      if(event->button == 1){ //left
+	_figures.push_back(new PolygoneRegulier(Couleur{1,0,0}, Point{(int)event->x,(int) event->y}, std::rand() % 100 + 20, std::rand() % 10 + 3));
+      }else if(event->button == 3){ //right
+          if(_figures.size() > 0)
+              _figures.pop_back();
+      }
+    window->invalidate(true);
+  }
+  return true;
+}
+
