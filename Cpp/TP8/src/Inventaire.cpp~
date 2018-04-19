@@ -1,0 +1,9 @@
+#include "Inventaire.hpp"
+
+/* Sortie */
+
+std::ostream& operator <<( std::ostream& os, const Inventaire& inventaire){
+  os << livre.getTitre() << ";"<< livre.getAuteur() << ";" << livre.getAnnee();
+  return os;
+}
+

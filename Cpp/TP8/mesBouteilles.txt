@@ -1,0 +1,9 @@
+Maredsous;2013-08-18;0,75
+Tripel Karmeliet;2013-08-08;0,75
+Chimay;2013-08-18;0,75
+Tripel Karmeliet;2013-06-08;0,25
+Beaujolais;2013-08-18;100
+Nitroglycérine;2013-08-18;5
+Maredsous;2013-06-17;0,75
+Cyanure;2013-08-18;0,25
+Mescaline;2013-08-18;0,1
