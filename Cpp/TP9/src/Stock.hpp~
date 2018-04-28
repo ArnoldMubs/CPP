@@ -1,0 +1,14 @@
+#ifndef STOCK_HPP_
+#define STOCK_HPP_
+
+#include "Bouteille.hpp"
+
+
+// Modèle : inventaire de bouteilles.
+class Stock {
+private :
+  std::map<std::string,float> _produits;
+public :
+  void recalculerStock (const Inventaire & inventaire);
+};
+#endif

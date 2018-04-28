@@ -1,0 +1,6 @@
+
+
+
+VueConsole(controleur& c);
+void actualiser();
+void run();

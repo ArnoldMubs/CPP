@@ -1,0 +1,12 @@
+#ifndef VUECONSOLE_HPP_
+#define VUECONSOLE_HPP_
+
+#include <gtkmm.h>
+
+// Classe abstraite pour dériver des vues du viewer de bouteilles.
+class VueConsole : public Vue {
+
+}
+
+#endif
+    
