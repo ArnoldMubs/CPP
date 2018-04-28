@@ -1,2 +1,0 @@
-/etudiants/amubuang/Documents/cpp/TP8/build/CMakeFiles/main_bouteille.out.dir
-/etudiants/amubuang/Documents/cpp/TP8/build/CMakeFiles/main_test.out.dir
