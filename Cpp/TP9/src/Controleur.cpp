@@ -18,7 +18,7 @@ void Controleur::run() {
 std::string Controleur::getTexte(){
   std::ostringstream oss;
   oss<<_inventaire;
-  oss.trier();
+  _inventaire.trier();
   return oss.str();
 }
 
@@ -29,10 +29,13 @@ void Controleur::chargerInventaire (const std::string & nomFichier){
       std::string nom,date;
       float volume;
       fichier>>nom>>date>>volume;
+      
+      /* à revoir
       	std::ostringstream oss;
 	oss<<fichier;
+      */
 
-        _inventaire._bouteilles.push_back(Bouteille{oss.str()});
+      _inventaire._bouteilles.push_back(Bouteille{nom,date,volume);
      for (auto & v : _vues)
        v->actualiser();
 

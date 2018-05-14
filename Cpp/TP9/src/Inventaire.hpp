@@ -8,7 +8,7 @@
 
 // Modèle : inventaire de bouteilles.
 struct Inventaire {
-    std::vector<Bouteille> _bouteilles;
+    std::list<Bouteille> _bouteilles;
 };
 
 void trier ();

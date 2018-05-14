@@ -2,6 +2,8 @@
 
 #include <locale>
 
+/* Flux  d'entrée */
+
 std::istream& operator >>(std::istream& is, Bouteille& b) {
 	std::locale vieuxLoc = std::locale::global(std::locale("fr_FR.UTF-8"));
     std::string buffer;
@@ -14,6 +16,8 @@ std::istream& operator >>(std::istream& is, Bouteille& b) {
 	std::locale::global(vieuxLoc);
 	return is;
 }
+
+/* Flux de sortie */
 
 std::ostream& operator <<(std::ostream& os, const Bouteille& b) {
 	std::locale vieuxLoc = std::locale::global(std::locale("fr_FR.UTF-8"));

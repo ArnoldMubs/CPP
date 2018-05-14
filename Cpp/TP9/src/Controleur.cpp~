@@ -18,12 +18,29 @@ void Controleur::run() {
 std::string Controleur::getTexte(){
   std::ostringstream oss;
   oss<<_inventaire;
+  oss.trier();
   return oss.str();
 }
 
 void Controleur::chargerInventaire (const std::string & nomFichier){
-    _inventaire._bouteilles.push_back(Bouteille{"mescaline", "2013-06-18", 0.1});
+     ifstream fichier(nomFichier, ios::in);
+  if(fichier){
+    while(!fichier.eof()){
+      std::string nom,date;
+      float volume;
+      fichier>>nom>>date>>volume;
+      	std::ostringstream oss;
+	oss<<fichier;
+
+        _inventaire._bouteilles.push_back(Bouteille{oss.str()});
      for (auto & v : _vues)
        v->actualiser();
-	
+
+     
+    }
+    
+  }else
+     cerr << "Impossible d'ouvrir le fichier !" << endl;
+  
+  
 }
