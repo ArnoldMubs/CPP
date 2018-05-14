@@ -1,0 +1,13 @@
+#ifndef MOTEUR_HPP_
+#define MOTEUR_HPP_
+
+#include "Plateau.hpp"
+
+class Moteur {
+  private : 
+    Plateau _plateau;
+  public :
+    Moteur();
+  
+}
+#endif

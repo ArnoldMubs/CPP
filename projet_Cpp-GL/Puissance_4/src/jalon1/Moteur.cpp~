@@ -1,0 +1,16 @@
+#include "Moteur.hpp"
+#include <iostream>
+
+
+bool Moteur::ajouterJetton(Jetton jetton,int col){
+  bool complete = false;
+  int ligne = _placeLibre.getPlaceLibre(col);
+  if ( ligne >= 0){ 
+    _plateau.setJetton(jetton,ligne,col)//_plateau[col][libre] = jetton;
+    _plateau.updatePlaceLibre(col);
+  }else {
+    complete  = true;
+  }
+  return complete;
+    
+}
