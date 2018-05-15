@@ -8,6 +8,7 @@ bool Moteur::ajouterJetton(Jetton jetton,int col){
   int ligne = _plateau.getPlaceLibre(col);
   if ( ligne >= 0){ 
     _plateau.setJetton(jetton,ligne,col);//_plateau[col][libre] = jetton;
+    checkHorizontal(ligne,col, jetton);
     _plateau.updatePlaceLibre(col);
   }else {
     complete  = true;
@@ -16,38 +17,35 @@ bool Moteur::ajouterJetton(Jetton jetton,int col){
     
 }
 
-bool Moteur::checkHorizontal(){
-    int ligne, colonne;
-    for ( ligne = 0; ligne < LIGNES ; ligne++)
-    {
-        for ( colonne = 0; colonne < COLONNES; colonne++)
-        {
-            _game[ligne][colonne].horz=1;
-            _game[ligne][colonne].vert=1;
-            _game[ligne][colonne].dg=1;
-            _game[ligne][colonne].dd=1;
-        }
-    }
-  // pour le horizontal
-    for ( ligne = 0; ligne < LIGNES ; ligne++)
-    {
-      for ( colonne = 1; colonne < COLONNES; colonne++)
-        {
-	  
-	  if ((_plateau.getJetton(ligne,colonne)==_plateau.getJetton(ligne,colonne-1)&&(_plateau.getJetton(ligne,colonne)!=LIBRE)))
-	    // meme couleur
-            {
-	      std::cout<<"Ho "<<_game[ligne][colonne].horz<<std::endl;
-	      _game[ligne][colonne].horz=_game[ligne][colonne].horz+1;
-	      if (_game[ligne][colonne].horz==4){
-		std::cout<<"youpie"<<std::endl;
-		return true;
-	      }
-	      
-            }
-	}
-	
-    }
+bool Moteur::checkHorizontal(int l, int c, Jetton jetton){
+  int cptG=0, cptD= 0, cpt = 1;
+  int limG = c-1, limD = COLONNES, limH = l, limB= LIGNES - l - 1;
+  int i=0, j = c+1;
+  std::cout<< "c: "<<c<<std::endl;
+  std::cout<< "limD: "<<limD<<std::endl;
+  std::cout<< "limG: "<<limG<<std::endl;
+  while (limG > 0 || j<limD){
+     if ( limG>0 && _plateau.getJetton (l,limG) == jetton ) {
+       cptG++;
+       cpt++;
+       std::cout<< "cptG: "<<cptG<<std::endl;
+     }
+     if (j<limD && _plateau.getJetton (l,j) == jetton ){
+       cptD++;
+       cpt++;
+       std::cout<< "cptD: "<<cptD<<std::endl;
+     }
+      j++;
+      limG--;
+
+     
+     if (cpt == 4){
+        std::cout<< "cpt: "<<cpt<<std::endl;
+       return true;
+     }
+     
+  }
+ 
     return false;
 }
 
