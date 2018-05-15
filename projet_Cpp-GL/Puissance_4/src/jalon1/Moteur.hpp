@@ -21,7 +21,7 @@ class Moteur {
   bool ajouterJetton(Jetton jetton,int col);
   void afficher ();
   Jetton winner();
-  bool checkHorizontal();
+  bool checkHorizontal(int l,int c, Jetton j);
   bool checkVertical ();
   bool checkDiagonal();
   
