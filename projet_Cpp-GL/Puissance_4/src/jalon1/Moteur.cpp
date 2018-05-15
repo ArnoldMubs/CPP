@@ -19,7 +19,7 @@ bool Moteur::ajouterJetton(Jetton jetton,int col){
 
 bool Moteur::checkHorizontal(int l, int c, Jetton jetton){
   int cptG=0, cptD= 0, cpt = 1;
-  int limG = c-1, limD = COLONNES - c - 1, limH = l, limB= LIGNES - l - 1;
+  int limG = c-1, limD = COLONNES, limH = l, limB= LIGNES - l - 1;
   int i=0, j = c+1;
   std::cout<< "c: "<<c<<std::endl;
   std::cout<< "limD: "<<limD<<std::endl;
