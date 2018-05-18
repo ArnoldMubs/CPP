@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,17 +6,41 @@
 
 #IncludeRegexTransform: 
 
-/etudiants/amubuang/Documents/projet_Cpp-GL/Puissance_4/src/jalon1/Moteur.cpp
-Moteur.hpp
-/etudiants/amubuang/Documents/projet_Cpp-GL/Puissance_4/src/jalon1/Moteur.hpp
+/Users/ArnoldMubs/Desktop/Mes cours/Licence 3/s4/c++/TP_CPP/L3_INFO/projet_Cpp-GL/Puissance_4/src/jalon1/Joueur.cpp
+Joueur.hpp
+/Users/ArnoldMubs/Desktop/Mes cours/Licence 3/s4/c++/TP_CPP/L3_INFO/projet_Cpp-GL/Puissance_4/src/jalon1/Joueur.hpp
+
+/Users/ArnoldMubs/Desktop/Mes cours/Licence 3/s4/c++/TP_CPP/L3_INFO/projet_Cpp-GL/Puissance_4/src/jalon1/Joueur.hpp
 iostream
 -
 
-/etudiants/amubuang/Documents/projet_Cpp-GL/Puissance_4/src/jalon1/Moteur.hpp
-Plateau.hpp
-/etudiants/amubuang/Documents/projet_Cpp-GL/Puissance_4/src/jalon1/Plateau.hpp
+/Users/ArnoldMubs/Desktop/Mes cours/Licence 3/s4/c++/TP_CPP/L3_INFO/projet_Cpp-GL/Puissance_4/src/jalon1/Moteur.cpp
+Moteur.hpp
+/Users/ArnoldMubs/Desktop/Mes cours/Licence 3/s4/c++/TP_CPP/L3_INFO/projet_Cpp-GL/Puissance_4/src/jalon1/Moteur.hpp
+iostream
+-
+sstream
+-
 
-/etudiants/amubuang/Documents/projet_Cpp-GL/Puissance_4/src/jalon1/Plateau.hpp
+/Users/ArnoldMubs/Desktop/Mes cours/Licence 3/s4/c++/TP_CPP/L3_INFO/projet_Cpp-GL/Puissance_4/src/jalon1/Moteur.hpp
+Plateau.hpp
+/Users/ArnoldMubs/Desktop/Mes cours/Licence 3/s4/c++/TP_CPP/L3_INFO/projet_Cpp-GL/Puissance_4/src/jalon1/Plateau.hpp
+
+/Users/ArnoldMubs/Desktop/Mes cours/Licence 3/s4/c++/TP_CPP/L3_INFO/projet_Cpp-GL/Puissance_4/src/jalon1/Plateau.cpp
+Plateau.hpp
+/Users/ArnoldMubs/Desktop/Mes cours/Licence 3/s4/c++/TP_CPP/L3_INFO/projet_Cpp-GL/Puissance_4/src/jalon1/Plateau.hpp
+
+/Users/ArnoldMubs/Desktop/Mes cours/Licence 3/s4/c++/TP_CPP/L3_INFO/projet_Cpp-GL/Puissance_4/src/jalon1/Plateau.hpp
+iostream
+-
+
+/Users/ArnoldMubs/Desktop/Mes cours/Licence 3/s4/c++/TP_CPP/L3_INFO/projet_Cpp-GL/Puissance_4/src/jalon1/Vue.hpp
+
+/Users/ArnoldMubs/Desktop/Mes cours/Licence 3/s4/c++/TP_CPP/L3_INFO/projet_Cpp-GL/Puissance_4/src/main_puissance4.cpp
+jalon1/Moteur.hpp
+/Users/ArnoldMubs/Desktop/Mes cours/Licence 3/s4/c++/TP_CPP/L3_INFO/projet_Cpp-GL/Puissance_4/src/jalon1/Moteur.hpp
+jalon1/Vue.hpp
+/Users/ArnoldMubs/Desktop/Mes cours/Licence 3/s4/c++/TP_CPP/L3_INFO/projet_Cpp-GL/Puissance_4/src/jalon1/Vue.hpp
 iostream
 -
 

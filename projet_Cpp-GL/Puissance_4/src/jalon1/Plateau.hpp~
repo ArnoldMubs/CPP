@@ -20,6 +20,9 @@ class Plateau {
    int getPlaceLibre(int col) const;
   Jetton getJetton (int l,int c) const;
  void setJetton (Jetton jetton,int l,int c);
+  bool colonneJouable (int c);
+  bool estComplet();
+  bool checkJetton (Jetton j);
   
 };
 #endif

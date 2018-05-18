@@ -21,7 +21,7 @@ class Plateau {
   Jetton getJetton (int l,int c) const;
  void setJetton (Jetton jetton,int l,int c);
   bool colonneJouable (int c);
-  bool estComplete();
+  bool estComplet();
   
 };
 #endif

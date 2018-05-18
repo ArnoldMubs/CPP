@@ -1,5 +1,6 @@
 #include "Moteur.hpp"
 #include <iostream>
+#include <sstream>
 
 ///////////////////////////////////////
 // Moteur
@@ -12,11 +13,16 @@ Moteur::Moteur(){}
 */
 bool Moteur::ajouterJetton(Jetton jetton,int col){
   bool complete = true;
-  int ligne = _plateau.getPlaceLibre(col);
-  if ( ligne >= 0 && _plateau.colonneJouable(col)){ 
-    _plateau.setJetton(jetton,ligne,col);//_plateau[col][libre] = jetton;
-    _plateau.updatePlaceLibre(col);
-  }else {
+  if (_plateau.colonneJouable(col)){
+    int ligne = _plateau.getPlaceLibre(col);
+    if ( ligne >= 0){ 
+      _plateau.setJetton(jetton,ligne,col);//_plateau[col][libre] = jetton;
+      _plateau.updatePlaceLibre(col);
+    }else{
+      complete  = false;
+    }
+  }
+  else {
     complete  = false;
   }
   return complete;
@@ -24,92 +30,95 @@ bool Moteur::ajouterJetton(Jetton jetton,int col){
 }
 
 /*
- *
- */
-bool Moteur::checkHorizontal(int c, Jetton jetton){
-  int cpt = 1;
-  int l = _plateau.getPlaceLibre(c)+1;
-  int limG = c-1, limD = COLONNES;
-  int j = c+1;
-  while (limG > 0 || j<limD){
-     if ( limG>0 && _plateau.getJetton (l,limG) == jetton ) {
-       cpt++;
-     }else {
-       limG = 0;
-     }
-     if (j<limD && _plateau.getJetton (l,j) == jetton ){
-       cpt++;
-     }else {
-       j = limD;
-     }
-      j++;
-      limG--;
+ * verifie si le jetton à gagné et renvoie vrai, sinon renvoie faux
+*/
+bool Moteur::win(int c, Jetton jetton){
 
-     if (cpt == 4){
-       return true;
-     }  
+  int compte = 0;
+  int di = _plateau.getPlaceLibre(c)+1;
+  int dj = c;
+  int i;
+							/* TEST VERTICAL */
+  i = LIGNES-1;
+  c = dj;
+  while ((compte<4) && (i>0)){
+      if (_plateau.getJetton(i,dj) == jetton){
+	 compte ++;
+	 i--;
+       }else{
+	 compte = 0;
+         i--;
+       }
+ }
+							/* TEST HORIZONTAL */
+ i = di;
+
+ c = COLONNES-1;
+ while ((compte<4) && (c>0)){
+   if (_plateau.getJetton(di,c) == jetton){
+      compte ++;
+      c--;
+   }else{
+      compte = 0;
+      c--;
+   }
+ }
+                                                      /* TEST DIAGONALE */
+  // Diagonale 1
+  i = di;
+  c = dj;
+  while (i<LIGNES && c > 0){
+    i++;
+    c--;
+  }
+  while (compte<4 && (i>0 && c<COLONNES)){
+    if (_plateau.getJetton(i,c) == jetton){
+      compte ++;
+      c++;
+      i--;
+   }else{
+      compte = 0;
+      c++;
+      i--;
+   }
+  }
+
+   // Diagonale 2
+  i = di;
+  c = dj;
+  while (i>0 && c > 0){
+    i--;
+    c--;
+  }
+  while (compte<4 && (i<=LIGNES && c<=COLONNES)){
+    if (_plateau.getJetton(i,c) == jetton){
+      compte ++;
+      c++;
+      i++;
+   }else{
+      compte = 0;
+      c++;
+      i++;
+   }
+  }
+  
+ 
+  if (compte == 4){
+    return true;
   }
     return false;
 }
 
 /*
- *
- */
-bool Moteur::checkVertical(int c, Jetton jetton){
-  int cptH=0,cptB=0,cpt = 1;
-  int l = _plateau.getPlaceLibre(c)+1;
-  int limH = l-1, limB= LIGNES;
-  int j = l+1;
-  while (limH > 0 || j<limB){
-     if ( limH>0 && _plateau.getJetton (limH,c) == jetton ) {
-       cpt++;
-       cptH++;
-     }else {
-       limH = 0;
-     }
-     if (j<limB && _plateau.getJetton (j,c) == jetton ){
-       cpt++;
-       cptB++;
-     }else {
-       j = limB;
-     }
-      j++;
-      limH--;
-
-     if (cpt == 4){
-       return true;
-     }  
-  }
-  return false;
-}
-
-/*
- *
- */
-bool Moteur::checkDiagonal(int c, Jetton jetton){
-  return false;
-}
-
-/*
- Return le Jetton du joueur Gagnant
-*/
-bool Moteur::win(int c, Jetton jetton){
-  if(checkVertical( c, jetton) || checkHorizontal( c,  jetton) || checkHorizontal( c,  jetton)){
-    return true;
-  }
-  return false;
-}
-
-/*
- *
+ * Test l'egalité de la partie
  */
 bool Moteur::egalite (){
-  return _plateau.estComplete();
+  return _plateau.estComplet();
 }
 
 
 /*
- *
+ * Affiche le plateau
  */
 void Moteur::afficher(){
   char affichage;
